@@ -5,18 +5,25 @@
 </div>
 <div class="main_section">
     <body style="background-color: #EEEE;">
-        <h1> Hi, I'm Aidan.</h1>
-        <p>University Graduate</p>
-        <p>I'm a university graduate from the University of Otago and an aspriring software developer.</p>
+        <p1 class="main-header">Hi, I'm Aidan.</p1>
+        <p2>University Graduate</p2>
+        <p3>I'm a university graduate from the University of Otago and an aspriring software developer.</p3>
     </body>
     <style>
+        .main-header {
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+        }
         .main_section {
             white-space: pre-line;
-            width: 300px;
+            max-width: 19vw;
+            height: auto;
+            width: 100%;
             padding: 10px;
             margin: 0;
-            position: absolute;
-            top: 30%;
+            position: fixed;
+            top: 35%;
             left: 25%;
             transform: translate(-25%, -30%);
             }
@@ -25,12 +32,15 @@
         }
     </style>
 </div>
-<div class="photo">
+<div class="img">
     <img src="/images/about_you.jpg" alt="Photo of me graduating">
     <style>
         img {
-            width: 500px;
-            position: absolute;
+            max-width: 25vw;
+            max-height: 50vh;
+            height: auto;
+            width: 100%;
+            position: fixed;
             top: 50%;
             left: 55%;
             transform: translate(-50%, -55%);
