@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 <div class="name">
     <h1>Aidan</h1>
 </div>
@@ -10,12 +11,21 @@
         <p3>I'm a university graduate from the University of Otago and an aspriring software developer.</p3>
     </body>
     <style>
+        .name {
+            font-family: 'Open Sans';
+            font-size: 12px;
+            margin: 10px;
+            padding: 10px;
+        }
         .main-header {
-            font-size: large;
+            font-family: 'Open Sans';
+            font-size: 26px;
             font-weight: bold;
             text-align: center;
         }
         .main_section {
+            font-family: 'Open Sans';
+            font-size: 22px;
             white-space: pre-line;
             max-width: 19vw;
             height: auto;
@@ -27,26 +37,35 @@
             left: 25%;
             transform: translate(-25%, -30%);
             }
-        .name {
-            padding: 10px;
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            max-height: 10vh;
+            width: 100%;
+            background-color: black;
+            text-align: center;
         }
     </style>
 </div>
-<div class="img">
+<div class="image">
     <img src="/images/about_you.jpg" alt="Photo of me graduating">
     <style>
         img {
-            max-width: 25vw;
-            max-height: 50vh;
+            max-width: 35vw;
+            max-height: 70vh;
             height: auto;
             width: 100%;
-            position: fixed;
-            top: 50%;
-            left: 55%;
-            transform: translate(-50%, -55%);
+            position: absolute;
+            top: 57%;
+            left: 60%;
+            transform: translate(-57%, -60%);
             border-radius: 50%;
         }
     </style>
+</div>
+<div class="footer">
+    <p>GitHub</p>
 </div>
 <!-- <div class="contact_me">
     <button>Contact Me</button>
