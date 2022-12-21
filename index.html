@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html>
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-<div class="name">
-    <h1>Aidan</h1>
-</div>
 <div class="main_section">
     <body style="background-color: #EEEE;">
         <p1 class="main-header">Hi, I'm Aidan.</p1>
-        <p2>University Graduate</p2>
+        <p2 class="role">University Graduate.</p2>
         <p3>I'm a university graduate from the University of Otago and an aspriring software developer.</p3>
     </body>
     <style>
         .name {
             font-family: 'Open Sans';
-            font-size: 12px;
-            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px;
             padding: 10px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            
         }
         .main-header {
             font-family: 'Open Sans';
-            font-size: 26px;
+            font-size: 35px;
             font-weight: bold;
             text-align: center;
+            
+        }
+        .role {
+            font-weight: bold;
+            font-size: 20px;
         }
         .main_section {
             font-family: 'Open Sans';
-            font-size: 22px;
+            font-size: 18px;
             white-space: pre-line;
             max-width: 19vw;
             height: auto;
@@ -33,9 +40,9 @@
             padding: 10px;
             margin: 0;
             position: fixed;
-            top: 35%;
+            top: 40%;
             left: 25%;
-            transform: translate(-25%, -30%);
+            transform: translate(-25%, -40%);
             }
         .footer {
             position: fixed;
@@ -43,8 +50,44 @@
             bottom: 0;
             max-height: 10vh;
             width: 100%;
-            background-color: black;
             text-align: center;
+        }
+        .github-button {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            float: right;
+            margin: 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .github-button:hover {
+            color: #f1502f;
+        }
+        .linkedin-button {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            float: right;
+            margin: 15px;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .linkedin-button:hover {
+            color: blue;
+        }
+        .headings {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            background: none;
+            cursor: pointer;
+            margin: 20px;
+            float: right;
+        }
+        .menu {
+            overflow: hidden;
         }
     </style>
 </div>
@@ -65,7 +108,15 @@
     </style>
 </div>
 <div class="footer">
-    <p>GitHub</p>
+    <button class="github-button" onclick="window.open('https://github.com/aidanHorne978','_blank')">GitHub</button>
+    <button class="linkedin-button" onclick="window.open('https://linkedin.com/in/aidan-horne-300176234', '_blank')">LinkedIn</button>
+</div>
+<div class="menu">
+    <button class="name" onclick="window.location.href='index.html';">Aidan</button>
+    <button class="headings" onclick="window.location.href='index.html';">Projects</button>
+    <button class="headings" onclick="window.location.href='index.html';">Qualifications</button>
+    <button class="headings" onclick="window.location.href='index.html';">About me</button>
+    <button class="headings" onclick="window.location.href='index.html';">Homepage</button>
 </div>
 <!-- <div class="contact_me">
     <button>Contact Me</button>
