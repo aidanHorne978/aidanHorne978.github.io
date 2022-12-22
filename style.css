@@ -1,6 +1,13 @@
 
 /* START OF INDEX STYLE CODE */
 
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: table;
+        }
+
         .name {
             font-family: 'Open Sans';
             font-size: 18px;
@@ -36,14 +43,11 @@
             top: 35%;
             left: 25%;
             transform: translate(-25%, -35%);
-            }
+        }
         .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            max-height: 10vh;
-            width: 100%;
-            text-align: center;
+            display: table-row;
+            height: 0;
+
         }
         .github-button {
             font-family: 'Open Sans';
@@ -90,7 +94,7 @@
 /* START OF ABOUT ME STYLE CODE */
 
         .about_me_body {
-            height: 1300px;
+            height: 1000px;
             overflow-y: scroll;
         }
 
@@ -101,15 +105,15 @@
             padding: 10px;
             position: relative;
             left: 150px;
-            top: 50px;
+            top: 20px;
             }
 
         .about_me_paragraph_1 {
             font-family: 'Open Sans';
             font-size: 18px;
-            max-width: 30vw;
+            max-width: 60vw;
             padding: 10px;
-            top: 50px;
+            top: 15px;
             left: 300px;
             position: relative;
             }
@@ -121,15 +125,15 @@
             padding: 10px;
             position: relative;
             left: 150px;
-            top: 30px;
+            top: 10px;
             }
 
         .about_me_paragraph_2 {
             font-family: 'Open Sans';
             font-size: 18px;
-            max-width: 30vw;
+            max-width: 60vw;
             padding: 10px;
-            top: 10px;
+            top: 0px;
             left: 300px;
             position: relative;
             }
@@ -147,7 +151,7 @@
         .about_me_paragraph_3 {
             font-family: 'Open Sans';
             font-size: 18px;
-            max-width: 30vw;
+            max-width: 60vw;
             padding: 10px;
             bottom: 15px;
             left: 300px;
