@@ -1,4 +1,7 @@
-.name {
+
+/* START OF INDEX STYLE CODE */
+
+        .name {
             font-family: 'Open Sans';
             font-size: 18px;
             font-weight: bold;
@@ -9,18 +12,18 @@
             cursor: pointer;
             
         }
-        .main-header {
+        .index_main-header {
             font-family: 'Open Sans';
             font-size: 35px;
             font-weight: bold;
             text-align: center;
             
         }
-        .role {
+        .index_role {
             font-weight: bold;
             font-size: 20px;
         }
-        .main_section {
+        .index_main_section {
             font-family: 'Open Sans';
             font-size: 18px;
             white-space: pre-line;
@@ -30,9 +33,9 @@
             padding: 10px;
             margin: 0;
             position: fixed;
-            top: 40%;
+            top: 35%;
             left: 25%;
-            transform: translate(-25%, -40%);
+            transform: translate(-25%, -35%);
             }
         .footer {
             position: fixed;
@@ -76,7 +79,79 @@
             margin: 20px;
             float: right;
             color: #181818;
+            display: flex;
         }
         .headings:hover {
             color: #3D3D3D;
         }
+
+/* END OF INDEX STYLE CODE */
+
+/* START OF ABOUT ME STYLE CODE */
+
+        .about_me_body {
+            height: 1300px;
+            overflow-y: scroll;
+        }
+
+        .about_me_heading_1 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 19vw;
+            padding: 10px;
+            position: relative;
+            left: 150px;
+            top: 50px;
+            }
+
+        .about_me_paragraph_1 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 30vw;
+            padding: 10px;
+            top: 50px;
+            left: 300px;
+            position: relative;
+            }
+
+        .about_me_heading_2 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 19vw;
+            padding: 10px;
+            position: relative;
+            left: 150px;
+            top: 30px;
+            }
+
+        .about_me_paragraph_2 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 30vw;
+            padding: 10px;
+            top: 10px;
+            left: 300px;
+            position: relative;
+            }
+        
+        .about_me_heading_3 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 19vw;
+            padding: 10px;
+            position: relative;
+            bottom: 5px;
+            left: 150px;
+            }
+
+        .about_me_paragraph_3 {
+            font-family: 'Open Sans';
+            font-size: 18px;
+            max-width: 30vw;
+            padding: 10px;
+            bottom: 15px;
+            left: 300px;
+            position: relative;
+            }
+        
+/* END OF ABOUT ME STYLE CODE */
