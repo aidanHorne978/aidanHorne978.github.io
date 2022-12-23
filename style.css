@@ -1,161 +1,191 @@
 
+/* START OF GLOBAL STYLE CODE */
+
+    html, body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        display: table;
+    }
+
+    .name {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        font-weight: bold;
+        margin: 15px;
+        padding: 10px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        
+    }
+
+    .footer {
+        display: table-row;
+        height: 0;
+
+    }
+
+    .github_button {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        float: right;
+        margin: 15px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .github_button:hover {
+        color: #f1502f;
+    }
+
+    .linkedin_button {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        float: right;
+        margin: 15px;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .linkedin_button:hover {
+        color: blue;
+    }
+
+    .headings {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin: 20px;
+        float: right;
+        color: #181818;
+        display: flex;
+    }
+
+    .headings:hover {
+        color: #3D3D3D;
+    }
+
+    .body_paragraph {
+        height: auto;
+        overflow-y: scroll;
+    }
+
 /* START OF INDEX STYLE CODE */
 
-        html, body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            display: table;
-        }
+    .index_main_header {
+        font-family: 'Open Sans';
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+        
+    }
+    .index_role {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .index_main_section {
+        font-family: 'Open Sans';
+        white-space: pre-line;
+        font-size: 18px;
+        max-width: 19vw;
+        padding: 10px;
+        position: relative;
+        left: 280px;
+        top: 125px;
+    }
 
-        .name {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            font-weight: bold;
-            margin: 15px;
-            padding: 10px;
-            border: none;
-            background: none;
-            cursor: pointer;
-            
-        }
-        .index_main-header {
-            font-family: 'Open Sans';
-            font-size: 35px;
-            font-weight: bold;
-            text-align: center;
-            
-        }
-        .index_role {
-            font-weight: bold;
-            font-size: 20px;
-        }
-        .index_main_section {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            white-space: pre-line;
-            max-width: 19vw;
-            height: auto;
-            width: 100%;
-            padding: 10px;
-            margin: 0;
-            position: fixed;
-            top: 35%;
-            left: 25%;
-            transform: translate(-25%, -35%);
-        }
-        .footer {
-            display: table-row;
-            height: 0;
-
-        }
-        .github-button {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            float: right;
-            margin: 15px;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-        .github-button:hover {
-            color: #f1502f;
-        }
-        .linkedin-button {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            float: right;
-            margin: 15px;
-            border: none;
-            background: none;
-            cursor: pointer;
-        }
-        .linkedin-button:hover {
-            color: blue;
-        }
-        .headings {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            background: none;
-            cursor: pointer;
-            margin: 20px;
-            float: right;
-            color: #181818;
-            display: flex;
-        }
-        .headings:hover {
-            color: #3D3D3D;
-        }
 
 /* END OF INDEX STYLE CODE */
 
 /* START OF ABOUT ME STYLE CODE */
 
-        .about_me_body {
-            height: 1000px;
-            overflow-y: scroll;
+
+    .about_me_heading_1 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 19vw;
+        padding: 10px;
+        position: relative;
+        left: 150px;
+        top: 20px;
         }
 
-        .about_me_heading_1 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 19vw;
-            padding: 10px;
-            position: relative;
-            left: 150px;
-            top: 20px;
-            }
+    .about_me_paragraph_1 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 60vw;
+        padding: 10px;
+        top: 15px;
+        left: 300px;
+        position: relative;
+        }
 
-        .about_me_paragraph_1 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 60vw;
-            padding: 10px;
-            top: 15px;
-            left: 300px;
-            position: relative;
-            }
+    .about_me_heading_2 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 19vw;
+        padding: 10px;
+        position: relative;
+        left: 150px;
+        top: 10px;
+        }
 
-        .about_me_heading_2 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 19vw;
-            padding: 10px;
-            position: relative;
-            left: 150px;
-            top: 10px;
-            }
+    .about_me_paragraph_2 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 60vw;
+        padding: 10px;
+        top: 0px;
+        left: 300px;
+        position: relative;
+        }
+    
+    .about_me_heading_3 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 19vw;
+        padding: 10px;
+        position: relative;
+        bottom: 5px;
+        left: 150px;
+        }
 
-        .about_me_paragraph_2 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 60vw;
-            padding: 10px;
-            top: 0px;
-            left: 300px;
-            position: relative;
-            }
-        
-        .about_me_heading_3 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 19vw;
-            padding: 10px;
-            position: relative;
-            bottom: 5px;
-            left: 150px;
-            }
-
-        .about_me_paragraph_3 {
-            font-family: 'Open Sans';
-            font-size: 18px;
-            max-width: 60vw;
-            padding: 10px;
-            bottom: 15px;
-            left: 300px;
-            position: relative;
-            }
+    .about_me_paragraph_3 {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 60vw;
+        padding: 10px;
+        bottom: 15px;
+        left: 300px;
+        position: relative;
+        }
         
 /* END OF ABOUT ME STYLE CODE */
+
+/* START OF QUALIFICATIONS CODE */
+
+    .qualifications_header {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 19vw;
+        padding: 10px;
+        position: relative;
+        top: 30px;
+        left: 175px;
+        }
+
+    .qualifications_list {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        max-width: 60vw;
+        padding: 10px;
+        top: 15px;
+        left: 300px;
+        position: relative;
+    }
