@@ -1,12 +1,14 @@
 #!/usr/bin/env python
-import requests
+from urllib.request import urlopen
 
 # Gets input from stdin and processes it and also stores
 # all the votes in a string so they are properly formatted
 # when tallying all the winning votes
 votes = dict([])
-req = requests.get("https://aidanHorne978.github.io/projects/testcases/pdftest.txt") 
-bigdata = req.text
+bigdata = []
+req = urlopen("https://aidanHorne978.github.io/projects/testcases/pdftest.txt") 
+bigdata = req.read()
+bigdata = str(bigdata, 'utf-8')
 bigdata = bigdata.split('\n')
 data = bigdata[0]
 tempdata = []
