@@ -1,19 +1,27 @@
 #!/usr/bin/env python
-import sys
+import requests
 
 # Gets input from stdin and processes it and also stores
 # all the votes in a string so they are properly formatted
 # when tallying all the winning votes
 votes = dict([])
-bigdata = open("aidanHorne978.github.io/projects/testcases/pdftest.txt")
-data = bigdata.readline().rstrip()
+req = requests.get("https://aidanHorne978.github.io/projects/testcases/pdftest.txt") 
+bigdata = req.text
+bigdata = bigdata.split('\n')
+data = bigdata[0]
 tempdata = []
 temp = ""
 candidate_count = 0
+i = 1
 while data:
-    temp += data + " "
-    tempdata.append(data.split())
-    data = bigdata.readline().rstrip()
+    try:
+        temp += data + " "
+        tempdata.append(data.split())
+        data = bigdata[i]
+        print(data)
+        i += 1
+    except IndexError:
+        break
 for vote in tempdata:
     for j in vote:
         if j not in votes:
