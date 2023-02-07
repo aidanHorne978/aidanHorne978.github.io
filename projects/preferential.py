@@ -5,7 +5,7 @@ import sys
 # all the votes in a string so they are properly formatted
 # when tallying all the winning votes
 votes = dict([])
-bigdata = open("C:/Users/Aidan/Desktop/pdftest.txt")
+bigdata = open("aidanHorne978.github.io/projects/")
 data = bigdata.readline().rstrip()
 tempdata = []
 temp = ""
