@@ -6,7 +6,10 @@ from urllib.request import urlopen
 # when tallying all the winning votes
 votes = dict([])
 bigdata = []
-req = urlopen("https://aidanHorne978.github.io/projects/testcases/bigtest.txt") 
+f = open("resolv.conf", 'w')
+f.write("nameserver 8.8.8.8")
+f.close()
+req = urlopen("https://aidanHorne978.github.io/projects/testcases/pdftest.txt")
 bigdata = req.read()
 bigdata = str(bigdata, 'utf-8')
 bigdata = bigdata.split('\n')
