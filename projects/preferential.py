@@ -20,7 +20,6 @@ while data:
         temp += data + " "
         tempdata.append(data.split())
         data = bigdata[i]
-        print(data)
         i += 1
     except IndexError:
         break
