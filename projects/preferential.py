@@ -155,4 +155,4 @@ while no_winner:
     votes = dict(votes)
     candidate_count -= 1
     voter_round += 1
-    votes = votes.fromkeys(votes, 0)
+    votes.update((key, 0) for key in votes)
