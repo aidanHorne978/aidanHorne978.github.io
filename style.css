@@ -12,6 +12,7 @@
         font-family: 'Open Sans';
         font-size: 18px;
         margin: 15px;
+        margin-left: 20px;
         padding: 10px;
         border: none;
         background: none;
@@ -221,3 +222,32 @@
 /* END OF ABOUT ME STYLE CODE */
 
 /* START OF PROJECTS STYLE CODE */
+
+    .project_buttons {
+        border: none;
+        margin-top: 50px;
+        font-family: 'Open Sans';
+        font-size: 17px;
+        color: grey;
+    }
+
+    .project_button:hover {
+        color: black;
+    }
+
+    .wrapper {
+        display: inline-block;
+        width: 90%;
+    }
+
+    .side_navigation {
+        position: fixed;
+		padding: 15px 25px;      
+        max-width: 15vw;
+        margin-right: 1000px;
+    }
+
+    .body_paragraph {
+        position: relative;
+        float: right;
+    }
