@@ -229,15 +229,17 @@
         font-family: 'Open Sans';
         font-size: 17px;
         color: grey;
+        cursor: pointer;
+
     }
 
-    .project_button:hover {
+    .project_buttons:hover {
         color: black;
     }
 
     .wrapper {
         display: inline-block;
-        width: 90%;
+        width: 100%;
     }
 
     .side_navigation {
@@ -245,9 +247,10 @@
 		padding: 15px 25px;      
         max-width: 15vw;
         margin-right: 1000px;
+        top: 45%;
+        transform: translateY(-45%);
     }
 
-    .body_paragraph {
-        position: relative;
-        float: right;
+    .python-IDE {
+        margin-left: 300px;
     }
