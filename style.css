@@ -344,3 +344,10 @@
     font-family: 'Open Sans';
     font-size: 15px;
   }
+
+  .bigger_font {
+    display: block;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    text-align: center;
+  }

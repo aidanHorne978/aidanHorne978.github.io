@@ -24,10 +24,10 @@
     <div class="snake_main_content">
         <div class="text_wrapper">
             <video class="playing_game_video" width="820" height="730" autoplay loop>
-                <source src="/videos/playing_game.mp4" type="video/mp4" />
+                <source src="/videos/small_agent.mp4" type="video/mp4" />
             </video>
             <div class="text_content">
-            <b>Summary:</b>
+            <b class="bigger_font">Summary:</b>
             <p> While settling into my new home in Wellington, I decided to do a coding project since it’s been about a year since I did my last one for university. 
                 I found a video of someone creating an AI to learn and play snake and thought it’d be a great project to help relearn good coding practices and on a topic I’m partial towards.
                 For the project, I set out with the goal of making it easy for any user to run and play. This meant I needed to ensure that once the code is ran, the user can:</p>
@@ -39,7 +39,7 @@
             <p>In the end, I covered all the parts I wanted in it for the user and I’m very happy with the result. Python is a great tool but I definitely found it’s 
                 drawbacks with performance to be frustrating. For my next project, I’m going to be developing something with .NET framework or in C.</p>
 
-
+            <b class="bigger_font">Genetic Algorithm.</b>
             <b>Definition of a genetic algorithm.</b>
             <p>A genetic algorithm is a problem-solving method inspired by the process of natural selection in evolution. It is used to find the best solution among a set of possible solutions to a given problem. 
                 In a genetic algorithm, a population of potential solutions is generated and evolved over generations. Through a process of selection, crossover, 
@@ -64,8 +64,70 @@
                 network architecture allows for the transformation and interpretation of the input data, enabling the neural network to learn patterns, extract meaningful relationships, and make informed decisions 
                 regarding the snake's movements in the game.</p>
 
-
-                
+            <b class="bigger_font">Training Process.</b>
+            <b>Number of generations.</b>
+            <p>One part of creating a genetic algorithm and a model to fit the problem, is trial and error. Over lots of experimenting, I’ve found that in the best conditions, 
+                the model will train in around 25 - 30 generations. It also has the tendency to either train to its full potential (fitness > steps * 200), or struggle to break 
+                even on fitness and stay around the -5,000 to -10,000 mark. For my final model, I’ve kept the generations at 75 with a clause (Best agents fitness >= steps * 200)
+                 to stop early because we have reached the optimal solution.</p>
+            <b>Number of steps.</b>
+            <p>The performance of the model is significantly influenced by the number of steps taken. As mentioned earlier, the formula for achieving the optimal solution is 
+                expressed as (optimal fitness >= steps * 200). In the case of a small model with 1000 steps per generation, the desired optimal fitness would be 200,000 or 
+                higher. However, when these models are executed, they exhibit notable weaknesses and appear to be less efficient, as demonstrated in the first video. On the other hand,
+                 the large model with 5000 steps per generation demonstrates enhanced efficiency and exhibits more favorable behavior. It achieves a fitness score of 1,000,000 
+                 or higher, which signifies a significant improvement compared to the small model. The video evidence showcases the superior performance and behavior of this 
+                 large model. In summary, the number of steps per generation plays a critical role in determining the model's performance. The small model with 1000 steps falls 
+                 short in efficiency and exhibits weaknesses, while the large model with 5000 steps demonstrates notable improvements and displays more desirable behavior with a 
+                 substantially higher fitness score.</p>
+            <b>Fitness function.</b>>
+            <p>The fitness function calculates the fitness scores for each agent in a given population. It considers factors such as the agent's highest score, 
+                number of deaths, average steps taken, and penalties incurred. The method assigns a score to each agent based on these factors and appends the scores along 
+                with their corresponding agent to a list. The method then returns this list of scores, providing a measure of performance for each agent in the population.</p>
+            <b>Crossover.</b>
+            <p>The crossover method performs crossover between the top-performing agents from the previous generation to create the next generation. 
+                It divides the best agents into mother and father lists, and then generates a new set of agents by randomly selecting chromosomes from either the mother or 
+                father lists. This process continues until the desired population size is reached. The method returns the new children as the next generation of agents, 
+                formed through the crossover process.</p>
+            <b>Mutation.</b>
+            <p>The mutation method introduces random mutations to promote diversity and prevent the population from getting stuck in local minima. 
+                It first generates a random probability between 0 and 100. If prob is divisible by 48, indicating a low probability event, the method selects a subset of 
+                agents in the population for mutation. For each selected agent, it iterates through each chromosome and adds a random value between -1 and 1 to the existing 
+                chromosome value. This introduces slight changes to the chromosome values, promoting exploration and potentially improving the population's overall performance. 
+                Finally, the method returns the mutated population.</p>
+            
+            <b class="bigger_font">Gamemodes.</b>
+            <b>Deathmatch.</b>
+            <p>In the deathmatch game mode, you control the black snake while the AI agent controls the gray snake. The objective is simple: defeat the AI agent by either cutting off 
+                its snake's path with your own snake or avoiding collisions with the walls. To win, you need to be smart and quick on your feet. Find opportunities to block the 
+                AI agent's movements and trap it in tight spots. Be careful not to crash into the back of the AI agent's snake, or you'll lose the game. If both snake heads collide, 
+                it's a draw.</p>
+            <b>Score Based.</b>
+            <p>In the turn-based score-based game mode, you and the AI take turns playing the classic game of Snake. The objective is to score as many points as possible during your turn.</p>
+            <b class="bigger_font">Multiprocessing.</b>
+            <b>Using threading.</b>
+            <p>Threading in Python allows for concurrent execution of different parts of the code. However, in CPython, the Global Interpreter Lock (GIL) limits the execution 
+                of Python bytecode to one thread at a time. This can hinder performance for CPU-bound tasks that require parallel execution on multiple cores. Nevertheless, 
+                the GIL has less impact on I/O-bound tasks. To overcome GIL limitations, alternative approaches like multiprocessing or using native code can be employed.</p>
+            <b>Using multiple processes.</b>
+            <p>Multiprocessing in Python enables concurrent execution of multiple processes, leveraging multiple CPU cores for efficient parallelism. It bypasses the 
+                Global Interpreter Lock (GIL), allowing true parallel execution of CPU-bound tasks. The multiprocessing module provides tools for process management, 
+                communication, and synchronization. However, multiprocessing introduces added complexity, requiring explicit mechanisms for inter-process communication and 
+                coordination. In my project, I have used pipes to transfer information about the training process to a visual training screen. This screen displays the 
+                training results of the current generations and the maximum result achieved in each generation. Care must be taken to avoid race conditions and ensure data 
+                integrity. Overall, multiprocessing is a powerful technique for improving performance in CPU-bound tasks by utilizing available hardware resources.</p>
+            <b>Trying different methods and optimizing.</b>
+            <p>While developing this project, I initially attempted to enhance training time by utilizing multi-threading. However, I encountered issues with the 
+                Global Interpreter Lock (GIL) that hindered the parallelization of the training task. Recognizing the limitations, I shifted gears and explored multiprocessing. 
+                Unfortunately, my initial implementation was flawed. I divided the generation into smaller groups, limiting the number of available parents for crossover and 
+                impeding effective learning. However, I didn't give up on the idea of multiprocessing. After careful consideration, I devised a new approach. I successfully 
+                parallelized the training process by splitting the current generation and executing their training simultaneously. By dividing them into smaller groups, 
+                I could leverage the benefits of multiprocessing while ensuring a sufficient number of parents for crossover. After completing the training, 
+                I combined the groups back into a single generation of 40, promoting better learning through a broader selection of parents. This optimization significantly 
+                reduced the training time from 20 minutes to just 3 minutes, as documented in my changelog. When the model is training, the screen displayed to the user remains 
+                somewhat sluggish, with updates occurring every 3-4 seconds for a small generation and 5-9 seconds for a large generation. Although this aspect could be further 
+                optimized, I have come to accept this slight delay. Considering the extensive calculations required during the training process, I believe the current 
+                implementation is already operating at its most efficient point. While a complete overhaul might yield incremental improvements, I have made the conscious 
+                decision not to undertake such extensive reworking at this stage.</p>
             </div>
         </div>
     </div>
