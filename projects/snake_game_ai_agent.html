@@ -11,32 +11,61 @@
             <button onclick="window.location.href='../projects.html';">Projects</button>
         </div>
     </div>
+    
     <img class="snake_image" src="/images/snake_title.png" alt="Snake Title">
-    <div class="content">
-        <div class="side_navigation">
-            <button class="project_buttons" onclick="window.location.href='/projects/snake_game_ai_agent.html';">Snake Game AI Agent (Python)</button>
-            <button class="project_buttons" onclick="window.location.href='/projects/sorting_algorithms.html';">Sorting Algorithms (Java)</button>
-            <button class="project_buttons" onclick="window.location.href='/projects/preferential.html';">Preferential (Python)</button>
-            <button class="project_buttons" onclick="window.location.href='/projects/fixing_the_game.html';">Fixing The Game (Python)</button>
-        </div>
-        <div class="main_content">
-            <div class="left_content">
-                <p class="snake_summary_content">Summary:</p>
-                <p class="snake_summary_content"> While settling into my new home in Wellington, I decided to do a coding project since it’s been about a year since I did my last one for university. 
+
+    <div class="side_navigation">
+        <button onclick="window.location.href='/projects/snake_game_ai_agent.html';">Snake Game AI Agent (Python)</button>
+        <button onclick="window.location.href='/projects/sorting_algorithms.html';">Sorting Algorithms (Java)</button>
+        <button onclick="window.location.href='/projects/preferential.html';">Preferential (Python)</button>
+        <button onclick="window.location.href='/projects/fixing_the_game.html';">Fixing The Game (Python)</button>
+    </div>
+
+    <div class="snake_main_content">
+        <div class="text_wrapper">
+            <video class="playing_game_video" width="820" height="730" autoplay loop>
+                <source src="/videos/playing_game.mp4" type="video/mp4" />
+            </video>
+            <div class="text_content">
+            <b>Summary:</b>
+            <p> While settling into my new home in Wellington, I decided to do a coding project since it’s been about a year since I did my last one for university. 
                 I found a video of someone creating an AI to learn and play snake and thought it’d be a great project to help relearn good coding practices and on a topic I’m partial towards.
                 For the project, I set out with the goal of making it easy for any user to run and play. This meant I needed to ensure that once the code is ran, the user can:</p>
-                <p class="snake_summary_content">- bounce between menus</p>
-                <p class="snake_summary_content">- training the agent</p>
-                <p class="snake_summary_content">- playing the game (solo or with agent)</p>
-                <p class="snake_summary_content">- retraining the agent if needed</p>
-                <p class="snake_summary_content">- viewing the agent.</p>
-                <p class="snake_summary_content">In the end, I covered all the parts I wanted in it for the user and I’m very happy with the result. Python is a great tool but I definitely found it’s 
-                    drawbacks with performance to be frustrating. For my next project, I’m going to be developing something with .NET framework or in C.</p>
-            </div>
-            <div class="right_content">
-                <video class="playing_game_video" width="800" height="900" autoplay loop>
-                <source src="/videos/playing_game.mp4" type="video/mp4" />
-                </video>
+            <p>- bounce between menus</p>
+            <p>- training the agent</p>
+            <p>- playing the game (solo or with agent)</p>
+            <p>- retraining the agent if needed</p>
+            <p>- viewing the agent.</p>
+            <p>In the end, I covered all the parts I wanted in it for the user and I’m very happy with the result. Python is a great tool but I definitely found it’s 
+                drawbacks with performance to be frustrating. For my next project, I’m going to be developing something with .NET framework or in C.</p>
+
+
+            <b>Definition of a genetic algorithm.</b>
+            <p>A genetic algorithm is a problem-solving method inspired by the process of natural selection in evolution. It is used to find the best solution among a set of possible solutions to a given problem. 
+                In a genetic algorithm, a population of potential solutions is generated and evolved over generations. Through a process of selection, crossover, 
+                and mutation, the algorithm explores and improves the solutions over time, aiming to find the optimal or near-optimal solution.</p>
+            <b>Sigmoid activation function</b>
+            <p>A sigmoid activation function is a mathematical function commonly used in artificial neural networks. It maps the input values to a range between 0 and 1. 
+                The function has an S-shaped curve, resembling the letter "S." The sigmoid function is often used to introduce non-linearity in the output of a neuron, allowing neural networks to model more 
+                complex relationships between input and output data. It is particularly useful in tasks like binary classification, where the output needs to be a probability between 0 and 1.</p>
+            <b>Matrix multiplication</b>
+            <p>Matrix multiplication is widely employed in AI applications, particularly in areas like deep learning and neural networks. In these fields, 
+                data is often represented as matrices, where rows indicate input samples and columns represent features or attributes. Matrix multiplication enables the calculation of weighted sums and 
+                activation functions across layers of neurons, facilitating the processing and transformation of input data. By performing matrix multiplications between input data and learnable parameters 
+                (weights and biases), neural networks can model intricate relationships and make predictions in tasks such as image recognition, speech processing, and recommendation systems. 
+                Matrix multiplication serves as a fundamental operation in AI, enabling crucial computations during training and inference processes.</p>
+            <b>Layers of a neural network.</b>
+            <p>My neural network consists of three layers. The first layer serves as the input layer, composed of a 12 by 120 matrix. In this matrix, each column contains information about the current game state, 
+                with the first value representing a specific aspect of the state, while the remaining values act as weights that establish connections and relationships within the data. The second layer is a 
+                hidden layer, with dimensions of 120 by 120. This layer plays a crucial role in enabling the neural network to learn intricate patterns and establish meaningful connections between the 
+                input information. By leveraging the hidden layer, the network becomes capable of capturing complex relationships and extracting valuable insights from the input data. Finally, the last layer 
+                is a 120 by 4 matrix. It serves as the output layer, responsible for translating all the processed information into four variables, each representing a possible direction in which the snake can move. 
+                Through this translation, the neural network effectively generates predictions or decisions regarding the snake's movement based on the given game state. Overall, this three-layer neural 
+                network architecture allows for the transformation and interpretation of the input data, enabling the neural network to learn patterns, extract meaningful relationships, and make informed decisions 
+                regarding the snake's movements in the game.</p>
+
+
+                
             </div>
         </div>
     </div>
