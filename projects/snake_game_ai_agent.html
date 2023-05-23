@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <link href="../style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+    
+    <div class="top_bar">
+        <button class="name" onclick="window.location.href='../index.html';">Aidan</button>
+        <div class="headings">
+            <button onclick="window.location.href='../index.html';">Homepage</button>
+            <button onclick="window.location.href='../about_me_blank.html';">About me</button>
+            <button onclick="window.location.href='../projects.html';">Projects</button>
+        </div>
+    </div>
+    <img class="snake_image" src="/images/snake_title.png" alt="Snake Title">
+    <div class="content">
+        <div class="side_navigation">
+            <button class="project_buttons" onclick="window.location.href='/projects/snake_game_ai_agent.html';">Snake Game AI Agent (Python)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/sorting_algorithms.html';">Sorting Algorithms (Java)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/preferential.html';">Preferential (Python)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/fixing_the_game.html';">Fixing The Game (Python)</button>
+        </div>
+        <div class="main_content">
+            <div class="left_content">
+                <p class="snake_summary_content">Summary:</p>
+                <p class="snake_summary_content"> While settling into my new home in Wellington, I decided to do a coding project since it’s been about a year since I did my last one for university. 
+                I found a video of someone creating an AI to learn and play snake and thought it’d be a great project to help relearn good coding practices and on a topic I’m partial towards.
+                For the project, I set out with the goal of making it easy for any user to run and play. This meant I needed to ensure that once the code is ran, the user can:</p>
+                <p class="snake_summary_content">- bounce between menus</p>
+                <p class="snake_summary_content">- training the agent</p>
+                <p class="snake_summary_content">- playing the game (solo or with agent)</p>
+                <p class="snake_summary_content">- retraining the agent if needed</p>
+                <p class="snake_summary_content">- viewing the agent.</p>
+                <p class="snake_summary_content">In the end, I covered all the parts I wanted in it for the user and I’m very happy with the result. Python is a great tool but I definitely found it’s 
+                    drawbacks with performance to be frustrating. For my next project, I’m going to be developing something with .NET framework or in C.</p>
+            </div>
+            <div class="right_content">
+                <video class="playing_game_video" width="800" height="900" autoplay loop>
+                <source src="/videos/playing_game.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+    
+    <div class="divider"></div>
+
+    <div class="footer">
+        <button class="github_button" onclick="window.open('https://github.com/aidanHorne978','_blank')">GitHub</button>
+        <button class="linkedin_button" onclick="window.open('https://linkedin.com/in/aidan-horne-300176234', '_blank')">LinkedIn</button>
+    </div>  
+
+    </html>

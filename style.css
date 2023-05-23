@@ -8,18 +8,6 @@
         display: table;
     }
 
-    .name {
-        font-family: 'Open Sans';
-        font-size: 18px;
-        margin: 15px;
-        margin-left: 20px;
-        padding: 10px;
-        border: none;
-        background: none;
-        cursor: pointer;
-        
-    }
-
     .footer {
         display: table-row;
         height: 0;
@@ -62,26 +50,88 @@
         box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
     }
 
-    .headings {
+    .no_top_bar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .headings button {
         font-family: 'Open Sans';
         font-size: 18px;
+        align-items: center;
         border: none;
         background: none;
         cursor: pointer;
         margin: 20px;
-        float: right;
         color: #181818;
-        display: flex;
+    }
+    .headings button {
+        position: relative;
+        padding: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .headings button::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #181818;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .headings button:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+    
+    .name {
+        font-family: 'Open Sans';
+        font-size: 18px;
+        align-items: center;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin: 20px;
+        margin-left: 100px;
+        color: #181818;
+        margin-right: auto;
     }
 
-    .headings:hover {
-        color: #3D3D3D;
+    .name {
+        position: relative;
+        padding: 10px;
+        padding-bottom: 10px;
     }
 
-    .body_paragraph {
-        height: auto;
-        overflow-y: scroll;
+    .name::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #181818;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
     }
+    
+    .name:hover::after {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
 
 /* START OF INDEX STYLE CODE */
 
@@ -132,9 +182,6 @@
         width: 80%;
     }
 
-/* Got a feeling the problem is the div to the left not resizing */
-/* tbh its not much of a problem  */
-
     .parent {
         position: relative;
     }
@@ -156,7 +203,7 @@
 /* START OF ABOUT ME STYLE CODE */
 
 
-    .about_me_heading_1 {
+    .about_me_heading {
         font-family: 'Open Sans';
         font-size: 18px;
         max-width: 19vw;
@@ -166,54 +213,12 @@
         top: 20px;
         }
 
-    .about_me_paragraph_1 {
+    .about_me_paragraph {
         font-family: 'Open Sans';
         font-size: 18px;
         max-width: 60vw;
         padding: 10px;
         top: 15px;
-        left: 300px;
-        position: relative;
-        text-align: justify;
-        }
-
-    .about_me_heading_2 {
-        font-family: 'Open Sans';
-        font-size: 18px;
-        max-width: 19vw;
-        padding: 10px;
-        position: relative;
-        left: 150px;
-        top: 10px;
-        }
-
-    .about_me_paragraph_2 {
-        font-family: 'Open Sans';
-        font-size: 18px;
-        max-width: 60vw;
-        padding: 10px;
-        top: 0px;
-        left: 300px;
-        position: relative;
-        text-align: justify;
-        }
-    
-    .about_me_heading_3 {
-        font-family: 'Open Sans';
-        font-size: 18px;
-        max-width: 19vw;
-        padding: 10px;
-        position: relative;
-        bottom: 5px;
-        left: 150px;
-        }
-
-    .about_me_paragraph_3 {
-        font-family: 'Open Sans';
-        font-size: 18px;
-        max-width: 60vw;
-        padding: 10px;
-        bottom: 15px;
         left: 300px;
         position: relative;
         text-align: justify;
@@ -230,27 +235,76 @@
         font-size: 17px;
         color: grey;
         cursor: pointer;
-
     }
 
     .project_buttons:hover {
         color: black;
     }
 
-    .wrapper {
-        display: inline-block;
-        width: 100%;
-    }
-
     .side_navigation {
         position: fixed;
 		padding: 15px 25px;      
         max-width: 15vw;
-        margin-right: 1000px;
         top: 45%;
         transform: translateY(-45%);
     }
 
-    .python-IDE {
-        margin-left: 300px;
+    .divider {
+        position: fixed;
+        top: 6.5%;
+        bottom: 0;
+        left: calc(15vw + 15px); /* Adjust this value to match the width of the sidebar */
+        width: 3px;
+        background-color: #9c9c9c; /* Adjust this color as needed */
+        z-index: 9999; /* Ensure the line appears above other elements */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow effect */
+    }
+
+    .top_bar {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 60px; /* Adjust the height of the top bar as needed */
+        background-color: #f0f0f0; /* Adjust the background color of the top bar */
+        border-bottom: 3px solid #9c9c9c; /* Add a border bottom to create the underline */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .content {
+        display: inline-block;
+        width: 100%;
+        font-family: 'Open Sans';
+        font-size: 18px;
+        display: flex;
+        flex-grow: 1; /* Allow the content to grow and occupy remaining space */
+    }
+
+    .main_content {
+        display: flex;
+        align-items: flex-start;
+        flex-grow: 1; /* Allow the main content to grow and occupy remaining space */
+        padding-top: 70px; /* Add padding as needed */
+        padding-left: calc(16vw + 35px); /* Add padding as needed */
+        padding-bottom: 100px;
+        overflow: hidden;
+    }
+
+/* END OF PROJECTS STYLE CODE */
+
+/* START OF SNAKE AI AGENT STYLE CODE */
+
+    .snake_image {
+        padding-left: calc(25vw + 155px);
+        padding-top: 100px;
+    }
+
+    .left_content {
+        flex: 1;
+    }
+      
+    .right_content {
+        flex: 1;
+        margin-top: -30px; /* Adjust the value as needed */
     }

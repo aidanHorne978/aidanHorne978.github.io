@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
-    <button class="name" onclick="window.location.href='index.html';">Aidan</button>
-    <button class="headings" onclick="window.location.href='projects.html';">Projects</button>
-    <button class="headings" onclick="window.location.href='about_me.html';">About me</button>
-    <button class="headings" onclick="window.location.href='index.html';">Homepage</button>
-
-    <div class="side_navigation">
-        <button class="project_buttons">Hash Table (C)</button>
-        <button class="project_buttons">My AI Agent vs Hunter (Python)</button>
-        <button class="project_buttons">Sorting Algorithms (Java)</button>
-        <button class="project_buttons" onclick="window.location.href='preferential.html';">Preferential (Python)</button>
-        <button class="project_buttons">Fixing The Game (Python)</button>
-
+    <div class="top_bar">
+        <button class="name" onclick="window.location.href='../index.html';">Aidan</button>
+        <div class="headings">
+            <button onclick="window.location.href='../index.html';">Homepage</button>
+            <button onclick="window.location.href='../about_me_blank.html';">About me</button>
+            <button onclick="window.location.href='../projects.html';">Projects</button>
+        </div>
     </div>
+
+    <div class="content">
+        <p class="box">Yessir</p>
+    </div>
+
+    <div class="wrapper">
+        <div class="side_navigation">
+            <button class="project_buttons" onclick="window.location.href='/projects/snake_game_ai_agent.html';">Snake Game AI Agent (Python)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/sorting_algorithms.html';">Sorting Algorithms (Java)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/preferential.html';">Preferential (Python)</button>
+            <button class="project_buttons" onclick="window.location.href='/projects/fixing_the_game.html';">Fixing The Game (Python)</button>
+        </div>
+    </div>
+
+    <div class="divider"></div>
 
     <body class="body-paragraph" style="background-color: #EEEE;">
     </body>
@@ -25,6 +35,3 @@
     </div>  
 
 </html>
-
-<!-- <div data-pym-src="https://www.jdoodle.com/iembed/v0/DBR?stdin=0&arg=0"></div>
-<script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"></script> -->
