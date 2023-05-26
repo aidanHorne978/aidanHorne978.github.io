@@ -224,6 +224,10 @@
         position: relative;
         text-align: justify;
         }
+
+    .body-paragraph-public {
+        padding-top: 50px;
+    }
         
 /* END OF ABOUT ME STYLE CODE */
 
@@ -314,6 +318,14 @@
 
 /* START OF SNAKE AI AGENT STYLE CODE */
 
+.snake_main_content-project {
+    font-family: 'Open Sans';
+    font-size: 15px;
+    padding-top: 70px; /* Add padding as needed */
+    padding-bottom: 100px;
+    padding-left: 30px;
+}
+
 .snake_main_content {
     /* display: flex;
     flex-wrap: wrap;
@@ -350,4 +362,10 @@
     font-family: 'Open Sans';
     font-size: 18px;
     text-align: center;
+  }
+
+  .good_gen_large {
+    width: 50%;
+    margin-right: 20px; /* Add some spacing between the video and text */
+    float: left; /* Float the video to the left */
   }

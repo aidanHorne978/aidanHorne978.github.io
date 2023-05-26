@@ -8,7 +8,7 @@
         <div class="headings">
             <button onclick="window.location.href='../index.html';">Homepage</button>
             <button onclick="window.location.href='../about_me_blank.html';">About me</button>
-            <button onclick="window.location.href='../projects.html';">Projects</button>
+            <button onclick="window.location.href='../snake-project.html';">Main Project</button>
         </div>
     </div>
     
@@ -64,6 +64,7 @@
                 network architecture allows for the transformation and interpretation of the input data, enabling the neural network to learn patterns, extract meaningful relationships, and make informed decisions 
                 regarding the snake's movements in the game.</p>
 
+            <img class="good_gen_large" src="/images/good_gen_large.png" alt="good generation image">
             <b class="bigger_font">Training Process.</b>
             <b>Number of generations.</b>
             <p>One part of creating a genetic algorithm and a model to fit the problem, is trial and error. Over lots of experimenting, I’ve found that in the best conditions, 
@@ -102,7 +103,12 @@
                 AI agent's movements and trap it in tight spots. Be careful not to crash into the back of the AI agent's snake, or you'll lose the game. If both snake heads collide, 
                 it's a draw.</p>
             <b>Score Based.</b>
-            <p>In the turn-based score-based game mode, you and the AI take turns playing the classic game of Snake. The objective is to score as many points as possible during your turn.</p>
+            <p>In the turn-based score-based game mode, you and the AI take turns playing the classic game of Snake. The objective is to score as many points as possible during your turn. This gamemode is displayed
+                in the video.
+            </p>
+            <video class="playing_game_video" width="820" height="730" autoplay loop>
+                <source src="/videos/score_based_AI.mp4" type="video/mp4" />
+            </video>
             <b class="bigger_font">Multiprocessing.</b>
             <b>Using threading.</b>
             <p>Threading in Python allows for concurrent execution of different parts of the code. However, in CPython, the Global Interpreter Lock (GIL) limits the execution 
@@ -128,6 +134,7 @@
                 optimized, I have come to accept this slight delay. Considering the extensive calculations required during the training process, I believe the current 
                 implementation is already operating at its most efficient point. While a complete overhaul might yield incremental improvements, I have made the conscious 
                 decision not to undertake such extensive reworking at this stage.</p>
+
             </div>
         </div>
     </div>
